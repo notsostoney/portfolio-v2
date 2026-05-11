@@ -182,8 +182,8 @@ export default class MonitorScreen extends EventEmitter {
             }
         };
 
-        // Set iframe attributes
-        iframe.src = 'https://os.henryheffernan.com/';
+        // Set iframe attributes — Antoine Pornin OS (GitHub Pages)
+        iframe.src = 'https://notsostoney.github.io/portfolio-inner-site/';
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.has('dev')) {
             iframe.src = 'http://localhost:3000/';
