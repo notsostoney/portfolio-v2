@@ -183,8 +183,11 @@ export default class MonitorScreen extends EventEmitter {
         };
 
         // Set iframe attributes
-        // Points to local screen page (Antoine Pornin OS)
-        iframe.src = '/screen/index.html';
+        iframe.src = 'https://os.henryheffernan.com/';
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('dev')) {
+            iframe.src = 'http://localhost:3000/';
+        }
         iframe.style.width = this.screenSize.width + 'px';
         iframe.style.height = this.screenSize.height + 'px';
         iframe.style.padding = IFRAME_PADDING + 'px';
